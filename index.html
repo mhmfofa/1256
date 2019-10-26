@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MultiSearch</title>
+    <!-- this is here to be the first resource loaded. It could be safer if we had requierJs -->
+    <script src="search.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>mhm multi search</header>
+    <main>
+        <div class="search-type companies">
+            search type:
+            <div class="btn-group">
+                <button data-key="companies">companies</button>
+                <button data-key="places">places</button>
+            </div>
+        </div>
+        <div id="searchWapper" class="search-wrapper">
+            <i class="delete" onclick="clearInput()"></i>
+            <i class="loader"></i>
+            <label for="searchInput"></label>
+            <input id="searchInput" type="text" />
+            <div class="suggetion-panel"></div>
+            <div class="search-history-panel"></div>
+        </div>
+    </main>
+    <!-- this is here to be sure document is loaded. It could be safer if we had requierJs -->
+    <script src="index.js"></script>
+</body>
+</html>
