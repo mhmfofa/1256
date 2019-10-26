@@ -1,0 +1,21 @@
+Dear reviewr
+
+There is some neccesery points to be mentioned:
+
+1- I saw in my task question you mentioned that I am not allowd to use any premade css framework. You didn't speak about
+javascript frameworks or libraries. So I prefered to write pure javascript. However I know that I could use some libraries
+like jQuery to manage DOM easier, requierJs to have dependency injection, or even modern javascript frameworks like angular 8
+to have all this features and more.
+
+2- Using semantic Html5 markups was important in my task. I know this approach, but this page has a simple html and I used just
+"head", "main" and "date" tags.
+
+3- All graphical symbols in this page (delet icon, search icon, location icon and animated loader) are created with just css and
+I haven't used any image, icon or font-icon.
+
+4- I have extended the task to be a bit more intresting :)))).
+
+5- Both public APIs which I used are free and limited and return only 5 result in each request. However I handled the overflow of 
+suggestion-panel. You can ckeck it by feeding hard-code result.
+
+All the best.
