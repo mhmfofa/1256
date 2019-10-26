@@ -15,6 +15,8 @@ let SearchModule = function (config) {
     let containerSelector = config && config.containerSelector ? config.containerSelector : "";
     let searchHistoryList = [];
     let lastSearchQuery;
+    let timeout = null;
+
     function loading(show) {
         show ?
             document.querySelector(containerSelector).classList.add('loading') :
@@ -33,10 +35,13 @@ let SearchModule = function (config) {
             // make query safe from html tags
             query = query.replace(/</g, "&lt;").replace(/>/g, "&gt;");
             loading(true);
-            setTimeout(function () {
+            if (timeout) {
+                clearTimeout(timeout);
+            }
+            timeout = setTimeout(function () {
                 xhr.onreadystatechange = function () {
                     if (this.readyState == 4) {
-                        lastSearchQuery="";
+                        lastSearchQuery = "";
 
                         loading(false);
                         if (this.status == 200) {
