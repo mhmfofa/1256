@@ -1,36 +1,41 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MultiSearch</title>
+    <title>MHM Multi Search</title>
+    <meta name="description" content="A powerfull tool for search companies and places!!!">
     <!-- this is here to be the first resource loaded. It could be safer if we had requierJs -->
     <script src="search.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <header>mhm multi search</header>
+    <header>
+        <h1>mhm multi search</h1>
+    </header>
     <main>
         <div class="search-type companies">
             search type:
             <div class="btn-group">
-                <button data-key="companies">companies</button>
-                <button data-key="places">places</button>
+                <button data-key="companies" title="search companies">companies</button>
+                <button data-key="places"  title="search places">places</button>
             </div>
         </div>
         <div id="searchWapper" class="search-wrapper">
-            <i class="delete" onclick="clearInput()"></i>
+            <button class="delete" title="clear search input" onclick="clearInput()"></button>
             <i class="loader"></i>
-            <label for="searchInput"></label>
-            <input id="searchInput" type="text" />
-            <div class="suggetion-panel"></div>
-            <div class="search-history-panel"></div>
+            <i class="search-icon"></i>
+            <label for="searchInput">Search for companies</label>
+            <input id="searchInput" type="text" placeholder="Search for companies" title="Search for companies" />
+            <div class="suggetion-panel" aria-live="polite"></div>
+            <div class="search-history-panel" aria-live="off"></div>
         </div>
     </main>
     <!-- this is here to be sure document is loaded. It could be safer if we had requierJs -->
     <script src="index.js"></script>
 </body>
+
 </html>
